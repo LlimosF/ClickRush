@@ -1,6 +1,8 @@
 <?php
 
-require_once("database.php");
+require_once("composants/database.php");
+
+require_once("composants/header.php");
 
 if(!empty($_POST["pseudo"]) && !empty($_POST["password"]) && !empty($_POST["confirm_password"])){
 
@@ -36,6 +38,9 @@ if(!empty($_POST["pseudo"]) && !empty($_POST["password"]) && !empty($_POST["conf
 
         <?php
 
+        header("Location: ".$_SERVER['PHP_SELF']);
+        exit();
+
       } else {
 
         ?>
@@ -56,9 +61,21 @@ if(!empty($_POST["pseudo"]) && !empty($_POST["password"]) && !empty($_POST["conf
 
 ?>
 
-<form method="POST">
-  <input type="text" name="pseudo" placeholder="Pseudo" required>
-  <input type="password" name="password" placeholder="Mot de passe" required>
-  <input type="password" name="confirm_password" placeholder="Re" required>
-  <button type="submit">Créer mon compte</button>
+<form method="POST" class="form-account">
+  <h2 class="form-title">Création</h2>
+  <div class="bloc-form">
+    <input type="text" name="pseudo" placeholder="Votre seudo" required>
+  </div>
+  <div class="bloc-form">
+    <input type="password" name="password" placeholder="Mot de passe" required>
+  </div>
+  <div class="bloc-form">
+    <input type="password" name="confirm_password" placeholder="Confirmation du mot de passe" required>
+  </div>
+  <div class="bloc-form">
+    <button type="submit" class="btn-create">Créer mon compte</button>
+  </div>
+  <div class="bloc-form">
+    <button class="btn-login" onClick="window.location.href = 'index.php'">Me connecter</button>
+  </div>
 </form>
