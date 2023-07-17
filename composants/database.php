@@ -1,7 +1,7 @@
 <?php
 
 $userdb = "clickrush";
-$passworddb = "Titine19!";
+$passworddb = "clickrush_db1";
 
 try {
 

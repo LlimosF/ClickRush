@@ -6,6 +6,9 @@
   <title>ClickRush</title>
 </head>
 <body>
-  
+  <?php
+    require_once("composants/inscription.php");
+  ?>
+
 </body>
 </html>
