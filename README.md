@@ -1,1 +1,1 @@
-# ClickRush
+https://florianllimos.fr/clickrush/
